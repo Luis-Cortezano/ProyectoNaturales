@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro sobre Contaminación</title>
+    <!-- Enlazar Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlazar iconos de Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <!-- Enlazar CSS personalizado -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Foro Contaminación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Regístrate</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container intro">
+        <h1>La Contaminación Ambiental</h1>
+        <p>La contaminación es la introducción de sustancias o productos que provocan efectos negativos en el medio ambiente. A continuación, exploraremos varios tipos de contaminación y sus impactos.</p>
+        <img src="https://via.placeholder.com/800x300" class="img-fluid" alt="Imagen de contaminación">
+    </div>
+
+    <div class="container mt-4 text-center">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-primary btn-circle" onclick="window.location.href='contaminacion-suelos.html'">
+                    <i class="fas fa-tractor"></i> Suelos
+                </button>
+            </div>
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-secondary btn-circle" onclick="window.location.href='contaminacion-agua.html'">
+                    <i class="fas fa-water"></i> Agua
+                </button>
+            </div>
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-success btn-circle" onclick="window.location.href='contaminacion-aire.html'">
+                    <i class="fas fa-smog"></i> Aire
+                </button>
+            </div>
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-danger btn-circle" onclick="window.location.href='contaminacion-sonora.html'">
+                    <i class="fas fa-volume-up"></i> Sonora
+                </button>
+            </div>
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-warning btn-circle" onclick="window.location.href='contaminacion-luminica.html'">
+                    <i class="fas fa-lightbulb"></i> Lumínica
+                </button>
+            </div>
+            <div class="col-md-4 mb-3">
+                <button class="btn btn-info btn-circle" onclick="window.location.href='contaminacion-radioactiva.html'">
+                    <i class="fas fa-radiation"></i> Radioactiva
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Comentarios</h2>
+        <div id="commentSection">
+            <div class="comment">
+                <p><strong>Usuario1:</strong> Este es un comentario sobre la contaminación.</p>
+            </div>
+        </div>
+
+        <div id="commentForm" class="mt-3">
+            <h3>Deja un comentario</h3>
+            <textarea class="form-control" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+            <button class="btn btn-primary mt-2">Enviar</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
