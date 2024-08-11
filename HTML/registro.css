@@ -1,0 +1,110 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url('imagen_login_registro.jpg'); /* Reemplaza con tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding-top: 56px; /* Asegura espacio para el navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-size: 1.1em;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-link {
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #dddddd !important;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px; /* Ajusta si necesitas más espacio respecto al navbar */
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding-left: 40px;
+    height: 45px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.form-control-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: #999;
+}
+
+.btn-success {
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.form-link {
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-link:hover {
+    color: #0056b3;
+}

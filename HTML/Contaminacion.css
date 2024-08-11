@@ -1,0 +1,116 @@
+
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-size: 1.1em;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.btn-circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.comment {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+.btn-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 8px;
+}
+
+.btn-circle + .btn-circle {
+    margin-top: 20px;
+}
+
+
+.btn-contaminacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px; 
+    height: 150px; 
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+.btn-contaminacion i {
+    font-size: 36px; 
+    margin-bottom: 5px;
+    transition: color 0.3s ease; 
+}
+
+.btn-contaminacion:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-4px); 
+}
+
+.btn-contaminacion:active {
+    transform: translateY(2px); 
+}
+
+.btn-secondary:hover i { color: #3d2c08; } /* Color azul para icono del tractor */
+.btn-primary:hover i { color: #3cd2ea; } /* Color cyan para icono del agua */
+.btn-success:hover i { color: #28a745; } /* Color verde para icono del aire */
+.btn-danger:hover i { color: #dc3545; } /* Color rojo para icono del sonido */
+.btn-warning:hover i { color: #fabd05; } /* Color amarillo para icono de la luz */
+.btn-info:hover i { color: #1191c0; } /* Color cyan para icono de la radiación */
+
+
+
+
