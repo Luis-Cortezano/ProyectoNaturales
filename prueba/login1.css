@@ -1,0 +1,96 @@
+body {
+    background: url('liebe-black-clover-3840x2160-12451.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login-form .form-control {
+    padding-left: 40px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    transition: border-bottom 0.3s;
+}
+
+.login-form .form-control:focus {
+    border-bottom: 1px solid #007bff;
+    box-shadow: none;
+}
+
+.login-form .form-group i.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.login-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.login-form .form-check-label {
+    margin-left: 5px;
+}
+
+.login-form .form-check a {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-form .form-check a:hover {
+    color: #0056b3;
+}
+
+.text-center a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.text-center a:hover {
+    color: #0056b3;
+}

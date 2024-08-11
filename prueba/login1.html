@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="login1.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+            <h2 class="text-center">Iniciar Sesión</h2>
+            <div class="form-group position-relative">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
+                <i class="fas fa-envelope icon"></i>
+            </div>
+            <div class="form-group position-relative">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                <i class="fas fa-lock icon"></i>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label" for="remember">Recordar</label>
+                <a href="#" class="float-right">Olvidé la contraseña</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Acceder</button>
+            <p class="text-center mt-3">No tengo cuenta, <a href="registro.html">crear una</a></p>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
