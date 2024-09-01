@@ -13,12 +13,12 @@
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="CSS/login.css" rel="stylesheet" type="text/css"/>
+    <link href="/ProyectoNaturales/Vistas/CSS/login.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="Contaminacion.jsp">
-            <img src="imagenes/iconoHoja.png" alt="Logo" class="d-inline-block align-middle mr-2">
+            <img src="/ProyectoNaturales/Vistas/imagenes/iconoHoja.png" alt="Logo" class="d-inline-block align-middle mr-2">
             Foro Contaminación
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
