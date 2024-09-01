@@ -9,6 +9,7 @@ import Configuracion.conectar;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -20,38 +21,48 @@ public class UsuarioDAO {
     PreparedStatement pstm;
     conectar conexion;
     ResultSet rs;
-    Usuario us = new Usuario();
-    Usuario usua;
+    Usuario us = null;
+    Usuario usua = null;
 
     public Usuario Validar(String correo, String pass) {
+        Usuario usua = null;
         try {
             conexion = new conectar();
             con = conexion.crearconexion();
             if (con != null) {
-                System.out.println("se conecto");
-                pstm = con.prepareStatement("select * from usuario where correo = ? and contrasena = ? ");
+                System.out.println("Se conectó a la base de datos");
+                pstm = con.prepareStatement("SELECT * FROM usuario WHERE correo = ? AND contrasena = ?");
                 pstm.setString(1, correo);
                 pstm.setString(2, pass);
                 rs = pstm.executeQuery();
-                while (rs.next()) {
-                    System.out.println("el rs tiene algo");
-                    if (!rs.getString("correo").equals("")) {
-                        usua = new Usuario();
-                        System.out.println("Entro A la Validacion");
-                        usua.setCorreo(rs.getString("correo"));
-                        usua.setId(rs.getInt("id"));
-                        usua.setContrasena(rs.getString("contrasena"));
-                        usua.setUsuario(rs.getString("usuario"));
-                        usua.setRol(rs.getString("rol"));
 
-                    }
+                if (rs.next()) {
+                    System.out.println("Entró a la validación");
+                    usua = new Usuario();
+                    usua.setCorreo(rs.getString("correo"));
+                    usua.setId(rs.getInt("id"));
+                    usua.setContrasena(rs.getString("contrasena"));
+                    usua.setUsuario(rs.getString("usuario"));
+                    usua.setRol(rs.getString("rol"));
                 }
-
             }
         } catch (Exception e) {
-            System.out.println("Eror Al Conectarse A la Base de Datos");
+            System.out.println("Error al conectarse a la base de datos");
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pstm != null) {
+                    pstm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-
         return usua;
     }
 

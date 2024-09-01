@@ -57,7 +57,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body>\r\n");
       out.write("    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n");
       out.write("        <a class=\"navbar-brand\" href=\"Contaminacion.jsp\">\r\n");
-      out.write("            <img src=\"imagenes/iconoHoja.png\" alt=\"Logo\" class=\"d-inline-block align-middle mr-2\">\r\n");
+      out.write("            <img src=\"/ProyectoNaturales/Vistas/imagenes/iconoHoja.png\" alt=\"Logo\" class=\"d-inline-block align-middle mr-2\">\r\n");
       out.write("            Foro Contaminación\r\n");
       out.write("        </a>\r\n");
       out.write("        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n");

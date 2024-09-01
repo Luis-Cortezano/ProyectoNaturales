@@ -39,13 +39,30 @@ public class Cvalidar extends HttpServlet {
             throws ServletException, IOException {
         try {
             String accion = request.getParameter("accion");
+            if ("exit".equalsIgnoreCase(accion)) {
+                HttpSession sesion = request.getSession(false);
+                request.getSession(true);
+                if (sesion != null) {
+                    sesion.invalidate();
+                    System.out.println("Sesión invalidada correctamente.");
+                }
+                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+                response.setHeader("Pragma", "no-cache");
+                response.setDateHeader("Expires", 0);
+                response.sendRedirect(request.getContextPath() + "/Vistas/login.jsp");
+                return;
+            }
+            
             if ("ingresar".equalsIgnoreCase(accion)) {
-                System.out.println("2");
-                HttpSession sesion = request.getSession();
+                HttpSession sesion = request.getSession(false);
+                if (sesion != null) {
+                    sesion.invalidate();
+                    System.out.println("Sesión previa invalidada.");
+                }
+                sesion = request.getSession(true);
                 String usu = request.getParameter("email");
                 String pass = request.getParameter("password");
-                user = usudao.Validar(usu, pass);
-
+                Usuario user = usudao.Validar(usu, pass);
                 if (user != null && user.getCorreo() != null) {
                     System.out.println("3");
                     sesion.setAttribute("log", '1');
@@ -68,10 +85,8 @@ public class Cvalidar extends HttpServlet {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            String errormensage = "Usuario o contraseña incorrectos";
-            request.setAttribute("error", errormensage);
-            request.getRequestDispatcher("/Vistas/login.jsp").forward(request, response);
+            request.setAttribute("error", "Ocurrió un error durante el proceso.");
+            request.getRequestDispatcher("/Vistas/Login.jsp").forward(request, response);
         }
 
     }

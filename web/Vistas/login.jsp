@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="Contaminacion.jsp">
-            <img src="imagenes/iconoHoja.png" alt="Logo" class="d-inline-block align-middle mr-2">
+            <img src="/ProyectoNaturales/Vistas/imagenes/iconoHoja.png" alt="Logo" class="d-inline-block align-middle mr-2">
             Foro Contaminación
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
