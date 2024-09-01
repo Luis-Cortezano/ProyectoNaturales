@@ -50,7 +50,7 @@ public final class Contaminacion_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n");
       out.write("        <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\" rel=\"stylesheet\">\r\n");
-      out.write("        <link href=\"CSS/Contaminacion.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <link href=\"/ProyectoNaturales/Vistas/CSS/Contaminacion.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <title>JSP Page</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
@@ -70,9 +70,10 @@ public final class Contaminacion_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                        </a>\r\n");
       out.write("                        <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"userDropdown\">\r\n");
       out.write("                            <a class=\"dropdown-item\" href=\"configuraciones.html\">Configuración de la cuenta</a>\r\n");
-      out.write("                            <form action=\"logout\" method=\"POST\" class=\"dropdown-item\">\r\n");
-      out.write("                                <button type=\"submit\" class=\"btn btn-link p-0 m-0\" style=\"color: inherit; text-decoration: none;\">Cerrar Sesión</button>\r\n");
-      out.write("                            </form>\r\n");
+      out.write("                            <form method=\"POST\" action=\"/ProyectoNaturales/Cvalidar\">\r\n");
+      out.write("                                    <input type=\"hidden\" name=\"accion\" value=\"exit\">\r\n");
+      out.write("                                    <button type=\"submit\" class=\"dropdown-item\">Cerrar Sesión</button>\r\n");
+      out.write("                                </form>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </li>\r\n");
       out.write("                </ul>\r\n");
