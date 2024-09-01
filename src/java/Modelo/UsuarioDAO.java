@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  * @author Maiyer
  */
 public class UsuarioDAO {
-    
+
     Connection con;
     PreparedStatement pstm;
     conectar conexion;
@@ -29,7 +29,7 @@ public class UsuarioDAO {
             con = conexion.crearconexion();
             if (con != null) {
                 System.out.println("se conecto");
-                pstm = con.prepareStatement("select * from usuarios where correo = ? and contrasena = ? ");
+                pstm = con.prepareStatement("select * from usuario where correo = ? and contrasena = ? ");
                 pstm.setString(1, correo);
                 pstm.setString(2, pass);
                 rs = pstm.executeQuery();
@@ -41,11 +41,9 @@ public class UsuarioDAO {
                         usua.setCorreo(rs.getString("correo"));
                         usua.setId(rs.getInt("id"));
                         usua.setContrasena(rs.getString("contrasena"));
-                        usua.setNombre(rs.getString("nombre"));
+                        usua.setUsuario(rs.getString("usuario"));
                         usua.setRol(rs.getString("rol"));
-                        usua.setDireccion(rs.getString("direccion"));
-                        usua.setApellido(rs.getString("apellidos"));
-                        usua.setTelefono(rs.getString("telefono"));
+
                     }
                 }
 
@@ -64,29 +62,19 @@ public class UsuarioDAO {
             if (con != null) {
                 System.out.println("Se ha establecido una conexcion con la base de datos");
             }
-            pstm = con.prepareStatement("INSERT INTO usuarios(nombre,apellidos,correo,telefono,contrasena,direccion,rol) VALUES(?,?,?,?,?,?,?);");
-            pstm.setString(1, us.getNombre());
-            System.out.println(us.getNombre());
-            pstm.setString(2, us.getApellido());
-            System.out.println(us.getApellido());
-            pstm.setString(3, us.getCorreo());
-            System.out.println(us.getCorreo());
-            pstm.setString(4, us.getTelefono());
-            System.out.println(us.getTelefono());
-            pstm.setString(5, us.getContrasena());
-            System.out.println(us.getContrasena());
-            pstm.setString(6, us.getDireccion());
-            System.out.println(us.getDireccion());
-            pstm.setString(7, us.getRol());
-            System.out.println(us.getRol());
-            if (us.getNombre() != null && us.getApellido() != null && us.getContrasena() != null && us.getCorreo() != null && us.getDireccion() != null && us.getTelefono() != null && us.getRol() != null) {
+            pstm = con.prepareStatement("INSERT INTO usuario(usuario,correo,contrasena,rol) VALUES(?,?,?,?)");
+            pstm.setString(1, us.getUsuario());
+            pstm.setString(2, us.getCorreo());
+            pstm.setString(3, us.getContrasena());
+            pstm.setString(4, us.getRol());
+            if (us.getUsuario() != null && us.getContrasena() != null && us.getCorreo() != null && us.getRol() != null) {
                 System.out.println("IF compraracion Todos Si");
                 if (pstm.executeUpdate() == 1) {
-            return true;
-            }else{
-                return false;
-            }
-            }else{
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
                 return false;
             }
         } catch (Exception e) {

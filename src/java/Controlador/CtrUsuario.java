@@ -9,20 +9,21 @@ import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Maiyer
  */
-@WebServlet(name = "Cvalidar", urlPatterns = {"/Cvalidar"})
-public class Cvalidar extends HttpServlet {
-
+public class CtrUsuario extends HttpServlet {
+        
+    UsuarioDAO dao = new UsuarioDAO();
+    Usuario us = new Usuario();
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,48 +33,22 @@ public class Cvalidar extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    UsuarioDAO usudao = new UsuarioDAO();
-    Usuario user = new Usuario();
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            String accion = request.getParameter("accion");
-            if ("ingresar".equalsIgnoreCase(accion)) {
-                System.out.println("2");
-                HttpSession sesion = request.getSession();
-                String usu = request.getParameter("email");
-                String pass = request.getParameter("password");
-                user = usudao.Validar(usu, pass);
-
-                if (user != null && user.getCorreo() != null) {
-                    System.out.println("3");
-                    sesion.setAttribute("log", '1');
-                    sesion.setAttribute("correo", user.getCorreo());
-                    sesion.setAttribute("contrasena", user.getContrasena());
-                    sesion.setAttribute("id", user.getId());
-                    sesion.setAttribute("usuario", user.getUsuario());
-                    sesion.setAttribute("rol", user.getRol());
-
-                    if (user.getRol().equals("ADMINISTRADOR")) {
-                        System.out.println("redirect");
-                        response.sendRedirect("/ProyectoNaturales/Vistas/Contaminacion.jsp");
-                    } else {
-                        response.sendRedirect("/ProyectoNaturales/Vistas/Contaminacion.jsp");
-                    }
-                } else {
-                    String errormensage = "Usuario o contraseña incorrectos";
-                    request.setAttribute("error", errormensage);
-                    request.getRequestDispatcher("/Vistas/login.jsp").forward(request, response);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            String errormensage = "Usuario o contraseña incorrectos";
-            request.setAttribute("error", errormensage);
-            request.getRequestDispatcher("/Vistas/login.jsp").forward(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet CtrUsuario</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet CtrUsuario at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -88,7 +63,29 @@ public class Cvalidar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String id, usuario, correo, contrasena, rol;
+        String accion = request.getParameter("accion");
+        switch (accion) {
+            case "registrarse":
+                System.out.println("Entro al Case");
+                usuario = request.getParameter("usuario");
+                correo = request.getParameter("correo");
+                contrasena = request.getParameter("password");
+                us.setUsuario(usuario);
+                us.setCorreo(correo);
+                us.setRol("CLIENTE");
+                us.setContrasena(contrasena);
+                if (dao.crear(us) == true) {
+                    request.getRequestDispatcher("/Vistas/login.jsp").forward(request, response);
+
+                } else {
+                    System.out.println("Error al insertar el usuarios");
+
+                }
+
+                break;
+            
+           }    
     }
 
     /**
@@ -103,7 +100,6 @@ public class Cvalidar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
     }
 
     /**

@@ -10,42 +10,42 @@ package Modelo;
  * @author Maiyer
  */
 public class Usuario {
-     int id;
-    String telefono,nombre,apellido, correo, contrasena, rol, direccion;
+  int id ;
+  String usuario, correo,contrasena, rol;
 
     public Usuario() {
     }
 
+    public Usuario(int id, String usuario, String correo, String contrasena, String rol) {
+        this.id = id;
+        this.usuario = usuario;
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.rol = rol;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getCorreo() {
@@ -63,33 +63,5 @@ public class Usuario {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public Usuario(int id, String telefono, String nombre, String apellido, String correo, String contrasena, String rol, String direccion) {
-        this.id = id;
-        this.telefono = telefono;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.contrasena = contrasena;
-        this.rol = rol;
-        this.direccion = direccion;
-    }
-
     
 }

@@ -14,7 +14,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="CSS/registro.css" rel="stylesheet" type="text/css"/>
+    <link href="/ProyectoNaturales/Vistas/CSS/registro.css" rel="stylesheet" type="text/css"/>
 
 
 </head>
@@ -40,24 +40,24 @@
 
     <div class="form-box">
         <h2>Regístrate</h2>
-        <form>
+        <form method="GET" action="/ProyectoNaturales/CtrUsuario?accion=registrarse">
             <div class="form-group position-relative">
                 <i class="fas fa-user form-control-icon"></i>
-                <input type="text" class="form-control" id="username" placeholder="Nombre de Usuario" required>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre de Usuario" required>
             </div>
             <div class="form-group position-relative">
                 <i class="fas fa-envelope form-control-icon"></i>
-                <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" required>
             </div>
             <div class="form-group position-relative">
                 <i class="fas fa-lock form-control-icon"></i>
-                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
             </div>
             <div class="form-group position-relative">
                 <i class="fas fa-lock form-control-icon"></i>
                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar Contraseña" required>
             </div>
-            <button type="submit" class="btn btn-success">Crear Cuenta</button>
+            <button type="submit" name="accion" value="registrarse" class="btn btn-success">Crear Cuenta</button>
             <a href="login.jsp" class="form-link">Ya tengo cuenta, iniciar sesión</a>
         </form>
     </div>
