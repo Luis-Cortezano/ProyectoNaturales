@@ -74,9 +74,9 @@ public class Cvalidar extends HttpServlet {
 
                     if (user.getRol().equals("ADMINISTRADOR")) {
                         System.out.println("redirect");
-                        response.sendRedirect("/ProyectoNaturales/Vistas/Contaminacion.jsp");
+                        response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");
                     } else {
-                        response.sendRedirect("/ProyectoNaturales/Vistas/Contaminacion.jsp");
+                        response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");
                     }
                 } else {
                     String errormensage = "Usuario o contraseña incorrectos";

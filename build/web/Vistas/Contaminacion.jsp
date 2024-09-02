@@ -4,6 +4,7 @@
     Author     : Maiyer
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,9 +33,9 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="configuraciones.html">Configuración de la cuenta</a>
                             <form method="POST" action="/ProyectoNaturales/Cvalidar">
-                                    <input type="hidden" name="accion" value="exit">
-                                    <button type="submit" class="dropdown-item">Cerrar Sesión</button>
-                                </form>
+                                <input type="hidden" name="accion" value="exit">
+                                <button type="submit" class="dropdown-item">Cerrar Sesión</button>
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -93,10 +94,12 @@
             <h2>Comentarios</h2>
             <div id="commentSection">
                 <!-- Aquí se mostrarían los comentarios existentes -->
-                <div class="comment">
-                    <p><strong>Usuario1:</strong> Este es un comentario sobre la contaminación.</p>
-                </div>
-                <!-- Más comentarios... -->
+                <c:forEach var="c" items="${comentarios}" varStatus="status">
+                    <c:set var="user" value="${users[status.index]}"/>
+                    <div class="comment">
+                        <p><strong>${user.getUsuario()}:</strong> ${c.getComentario()}</p>
+                    </div>
+                </c:forEach>
             </div>
 
             <!-- Formulario para agregar comentarios -->
