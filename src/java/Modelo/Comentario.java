@@ -12,17 +12,16 @@ import java.sql.Timestamp;
  * @author Maiyer
  */
 public class Comentario {
-    int id, usuario_id, comentario_padre_id;
+    int id, usuario_id;
     String comentario;
     Timestamp fecha;
 
     public Comentario() {
     }
 
-    public Comentario(int id, int usuario_id, int comentario_padre_id, String comentario, Timestamp fecha) {
+    public Comentario(int id, int usuario_id, String comentario,Timestamp fecha) {
         this.id = id;
         this.usuario_id = usuario_id;
-        this.comentario_padre_id = comentario_padre_id;
         this.comentario = comentario;
         this.fecha = fecha;
     }
@@ -41,14 +40,6 @@ public class Comentario {
 
     public void setUsuario_id(int usuario_id) {
         this.usuario_id = usuario_id;
-    }
-
-    public int getComentario_padre_id() {
-        return comentario_padre_id;
-    }
-
-    public void setComentario_padre_id(int comentario_padre_id) {
-        this.comentario_padre_id = comentario_padre_id;
     }
 
     public String getComentario() {

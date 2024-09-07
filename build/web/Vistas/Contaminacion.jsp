@@ -45,7 +45,7 @@
         <div class="container intro">
             <h1>La Contaminación Ambiental</h1>
             <p>La contaminación ambiental es un fenómeno complejo que afecta a la salud del planeta y de sus habitantes. Se define como la presencia de sustancias nocivas en el medio ambiente, que pueden ser perjudiciales para los seres vivos y el equilibrio de los ecosistemas. Este texto explora las causas, tipos y consecuencias de la contaminación, así como su impacto en la salud pública y el medio ambiente.</p>
-            <img src="imagenes/contaminacion.jpg" class="img-fluid" alt="Imagen de contaminación">
+            <img src="/Proyecto/imagenes/contaminacion.jpg" class="img-fluid" alt="Imagen de contaminación">
         </div>
 
         <div class="container texto">
@@ -105,16 +105,16 @@
             <!-- Formulario para agregar comentarios -->
             <div id="commentForm" class="mt-3">
                 <h3>Deja un comentario</h3>
-                <!-- Asegúrate de tener un backend que maneje la autenticación -->
-                <!-- Aquí simplemente mostramos el formulario si el usuario está autenticado -->
-                <textarea class="form-control" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
-                <button class="btn btn-primary mt-2">Enviar</button>
+                <form action="/ProyectoNaturales/CtrComentario?accion=Agregar" method="POST">
+                    <input type="hidden" value="${idU}" name="idUser"> <!-- Envío del ID de usuario -->
+                    <textarea name="comentario" class="form-control" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                </form>
             </div>
-        </div>
 
-        <!-- Scripts de Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <!-- Scripts de Bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>

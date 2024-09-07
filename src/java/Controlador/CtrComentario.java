@@ -10,6 +10,8 @@ import Modelo.ComentarioDAO;
 import Modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -43,6 +45,7 @@ public class CtrComentario extends HttpServlet {
         try {
             List<Comentario> lco = comentariodao.obtenerComentarios();
             List<Usuario> lusers = comentariodao.obtenerUsuarios();
+
             switch (accion) {
                 case "listarped":
                 case "home":
@@ -51,12 +54,24 @@ public class CtrComentario extends HttpServlet {
                     System.out.println("Entro A enviar los Comentarios");
                     request.getRequestDispatcher("Vistas/Contaminacion.jsp").forward(request, response);
                     break;
-                default:
-                    System.out.println("Accion no reconocida");
+                case "Agregar":
+                    Comentario p = new Comentario();
+                    System.out.println("Entro Agregar Comentario");
+                    int usuario_id = Integer.parseInt(request.getParameter("idUser"));
+                    String comentario = request.getParameter("comentario");
+                    p.setUsuario_id(usuario_id);
+                    p.setComentario(comentario);
+                    comentariodao.crear(p);
+                    request.getRequestDispatcher("/CtrComentario?accion=home").forward(request, response);
                     break;
+
+                default:
+                    System.out.println("Acción no reconocida");
+                    break;
+
             }
         } catch (Exception e) {
-            System.out.println("Error en el procesamiento de la solicitud"+e);
+            System.out.println("Error en el procesamiento de la solicitud" + e);
         }
     }
 

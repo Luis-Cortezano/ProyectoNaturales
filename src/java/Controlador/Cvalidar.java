@@ -52,7 +52,7 @@ public class Cvalidar extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/Vistas/login.jsp");
                 return;
             }
-            
+
             if ("ingresar".equalsIgnoreCase(accion)) {
                 HttpSession sesion = request.getSession(false);
                 if (sesion != null) {
@@ -74,7 +74,10 @@ public class Cvalidar extends HttpServlet {
 
                     if (user.getRol().equals("ADMINISTRADOR")) {
                         System.out.println("redirect");
-                        response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");
+                        request.setAttribute("idU", user.getId());
+                        System.out.println(user.getId());
+                        request.getRequestDispatcher("/CtrComentario?accion=home").forward(request, response);
+
                     } else {
                         response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");
                     }
@@ -118,7 +121,7 @@ public class Cvalidar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
+
     }
 
     /**
