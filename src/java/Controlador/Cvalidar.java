@@ -65,7 +65,7 @@ public class Cvalidar extends HttpServlet {
                 Usuario user = usudao.Validar(usu, pass);
                 if (user != null && user.getCorreo() != null) {
                     System.out.println("3");
-                    sesion.setAttribute("log", '1');
+                    sesion.setAttribute("log", "1");
                     sesion.setAttribute("correo", user.getCorreo());
                     sesion.setAttribute("contrasena", user.getContrasena());
                     sesion.setAttribute("id", user.getId());
@@ -74,9 +74,7 @@ public class Cvalidar extends HttpServlet {
 
                     if (user.getRol().equals("ADMINISTRADOR")) {
                         System.out.println("redirect");
-                        request.setAttribute("idU", user.getId());
-                        System.out.println(user.getId());
-                        request.getRequestDispatcher("/CtrComentario?accion=home").forward(request, response);
+                        response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");
 
                     } else {
                         response.sendRedirect("/ProyectoNaturales/CtrComentario?accion=home");

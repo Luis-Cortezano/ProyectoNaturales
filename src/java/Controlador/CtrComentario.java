@@ -47,7 +47,6 @@ public class CtrComentario extends HttpServlet {
             List<Usuario> lusers = comentariodao.obtenerUsuarios();
 
             switch (accion) {
-                case "listarped":
                 case "home":
                     request.setAttribute("comentarios", lco);
                     request.setAttribute("users", lusers);
