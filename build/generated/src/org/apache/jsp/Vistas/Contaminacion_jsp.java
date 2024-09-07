@@ -158,18 +158,6 @@ public final class Contaminacion_jsp extends org.apache.jasper.runtime.HttpJspBa
         return;
       out.write("\r\n");
       out.write("        </div>\r\n");
-      out.write("\r\n");
-      out.write("        <!-- Script para redirección -->\r\n");
-      out.write("        <script>\r\n");
-      out.write("            window.onload = function () {\r\n");
-      out.write("                const redirected = localStorage.getItem('redirected');\r\n");
-      out.write("                if (!redirected) {\r\n");
-      out.write("                    localStorage.setItem('redirected', 'true');\r\n");
-      out.write("                    window.location.href = '/ProyectoNaturales/CtrComentarios?accion=home';\r\n");
-      out.write("                    console.log(\"Entro Al If\");\r\n");
-      out.write("                }\r\n");
-      out.write("            }\r\n");
-      out.write("        </script>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -411,9 +399,6 @@ public final class Contaminacion_jsp extends org.apache.jasper.runtime.HttpJspBa
         out.write("                        <form action=\"/ProyectoNaturales/CtrComentario?accion=Agregar&idu=");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("\" method=\"POST\">\r\n");
-        out.write("                            <input type=\"hidden\" name=\"usuario_id\" value=\"");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\">\r\n");
         out.write("                            <textarea name=\"comentario\" class=\"form-control\" placeholder=\"Escribe tu comentario aquí...\" rows=\"3\"></textarea>\r\n");
         out.write("                            <button type=\"submit\" class=\"btn btn-primary mt-2\">Enviar</button>\r\n");
         out.write("                        </form>\r\n");

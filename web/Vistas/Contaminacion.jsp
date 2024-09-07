@@ -120,7 +120,6 @@ Author     : Maiyer
                     <div id="commentForm" class="mt-3">
                         <h3>Deja un comentario</h3>
                         <form action="/ProyectoNaturales/CtrComentario?accion=Agregar&idu=${sessionScope.id}" method="POST">
-                            <input type="hidden" name="usuario_id" value="${sessionScope.id}">
                             <textarea name="comentario" class="form-control" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
                             <button type="submit" class="btn btn-primary mt-2">Enviar</button>
                         </form>
@@ -137,17 +136,5 @@ Author     : Maiyer
                 </c:otherwise>
             </c:choose>
         </div>
-
-        <!-- Script para redirección -->
-        <script>
-            window.onload = function () {
-                const redirected = localStorage.getItem('redirected');
-                if (!redirected) {
-                    localStorage.setItem('redirected', 'true');
-                    window.location.href = '/ProyectoNaturales/CtrComentarios?accion=home';
-                    console.log("Entro Al If");
-                }
-            }
-        </script>
     </body>
 </html>
