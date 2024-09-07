@@ -54,6 +54,7 @@ Author     : Maiyer
             </div>
         </nav>
 
+
         <div class="container intro">
             <h1>La Contaminación Ambiental</h1>
             <p>La contaminación ambiental es un fenómeno complejo que afecta a la salud del planeta y de sus habitantes. Se define como la presencia de sustancias nocivas en el medio ambiente, que pueden ser perjudiciales para los seres vivos y el equilibrio de los ecosistemas. Este texto explora las causas, tipos y consecuencias de la contaminación, así como su impacto en la salud pública y el medio ambiente.</p>
@@ -70,32 +71,32 @@ Author     : Maiyer
             <div class="row">
                 <!-- Botones de contaminación -->
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-secondary btn-contaminacion" onclick="window.location.href = 'contaminacion-suelos.html'">
+                    <button class="btn btn-secondary btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Suelos.jsp'">
                         <i class="fas fa-tractor"></i><br>Suelos
                     </button>
                 </div>
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-primary btn-contaminacion" onclick="window.location.href = 'contaminacion-agua.html'">
+                    <button class="btn btn-primary btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Agua.jsp'">
                         <i class="fas fa-water"></i><br>Agua
                     </button>
                 </div>
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-success btn-contaminacion" onclick="window.location.href = 'contaminacion-aire.html'">
+                    <button class="btn btn-success btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Aire.jsp'">
                         <i class="fas fa-smog"></i><br>Aire
                     </button>
                 </div>
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-danger btn-contaminacion" onclick="window.location.href = 'contaminacion-sonora.html'">
+                    <button class="btn btn-danger btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Sonora.jsp'">
                         <i class="fas fa-volume-up"></i><br>Sonora
                     </button>
                 </div>
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-warning btn-contaminacion" onclick="window.location.href = 'contaminacion-luminica.html'">
+                    <button class="btn btn-warning btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Luminica.jsp'">
                         <i class="fas fa-lightbulb"></i><br>Lumínica
                     </button>
                 </div>
                 <div class="col-md-4 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-info btn-contaminacion" onclick="window.location.href = 'contaminacion-radioactiva.html'">
+                    <button class="btn btn-info btn-contaminacion" onclick="window.location.href = '/ProyectoNaturales/Vistas/Contaminacion-Radioactiva.jsp'">
                         <i class="fas fa-radiation"></i><br>Radioactiva
                     </button>
                 </div>
@@ -136,5 +137,9 @@ Author     : Maiyer
                 </c:otherwise>
             </c:choose>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
