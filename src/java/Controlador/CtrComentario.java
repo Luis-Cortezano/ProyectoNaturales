@@ -47,7 +47,6 @@ public class CtrComentario extends HttpServlet {
             List<Usuario> lusers = comentariodao.obtenerUsuarios();
 
             switch (accion) {
-                case "listarped":
                 case "home":
                     request.setAttribute("comentarios", lco);
                     request.setAttribute("users", lusers);
@@ -57,7 +56,7 @@ public class CtrComentario extends HttpServlet {
                 case "Agregar":
                     Comentario p = new Comentario();
                     System.out.println("Entro Agregar Comentario");
-                    int usuario_id = Integer.parseInt(request.getParameter("idUser"));
+                    int usuario_id = Integer.parseInt(request.getParameter("idu"));
                     String comentario = request.getParameter("comentario");
                     p.setUsuario_id(usuario_id);
                     p.setComentario(comentario);
