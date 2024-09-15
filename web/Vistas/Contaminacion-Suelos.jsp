@@ -47,7 +47,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     
-                    <a class="nav-link" href="Contaminacion.jsp">
+                    <a class="nav-link" href="/ProyectoNaturales/CtrComentario?accion=home">
                         <i class="fa fa-arrow-left"></i> Regresar
                     </a>
                 </li>
