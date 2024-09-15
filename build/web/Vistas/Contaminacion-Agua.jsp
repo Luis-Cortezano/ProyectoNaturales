@@ -40,13 +40,13 @@
             <img src="imagenes/iconoHoja.png" alt="Logo" class="d-inline-block align-middle mr-2">
             Foro Contaminación
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="Contaminacion.jsp">
+                    <a class="nav-link" href="/ProyectoNaturales/CtrComentario?accion=home" >
                         <i class="fa fa-arrow-left"></i> Regresar
                     </a>
                 </li>
