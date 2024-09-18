@@ -76,7 +76,6 @@
         <ul>
             <li><strong>Degradación de la Fertilidad:</strong> Reducción en la capacidad del suelo para soportar la vida vegetal.</li>
             <li><strong>Contaminación de Agua:</strong> Infiltración de contaminantes en acuíferos y cuerpos de agua.</li>
-            <li><strong>Impacto en la Salud:</strong> Riesgos para la salud humana y animal debido a la exposición a contaminantes.</li>
         </ul>
 
         <h2 class="mt-4">Cómo Reducir la Contaminación del Suelo</h2>

@@ -73,7 +73,6 @@
         <h2 class="mt-4">Consecuencias de la Contaminación Lumínica</h2>
         <p>La contaminación lumínica tiene diversas repercusiones:</p>
         <ul>
-            <li><strong>Impacto en la Salud:</strong> Trastornos del sueño, estrés, y otros problemas de salud relacionados con la exposición a la luz artificial nocturna.</li>
             <li><strong>Afectación a la Vida Silvestre:</strong> Interferencia con los patrones naturales de animales y alteración de los ecosistemas.</li>
             <li><strong>Deslumbramiento y Seguridad:</strong> Aumento del riesgo de accidentes de tráfico y problemas de visibilidad nocturna.</li>
         </ul>

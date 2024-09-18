@@ -73,7 +73,6 @@
         <h2 class="mt-4">Consecuencias de la Contaminación Sonora</h2>
         <p>Las consecuencias de la contaminación sonora son diversas:</p>
         <ul>
-            <li><strong>Problemas de Salud:</strong> Estrés, pérdida auditiva y problemas de sueño.</li>
             <li><strong>Disminución de la Calidad de Vida:</strong> Interferencia en la vida cotidiana y el bienestar general.</li>
             <li><strong>Impacto en el Medio Ambiente:</strong> Alteración del comportamiento de la fauna y perturbación de los ecosistemas.</li>
         </ul>

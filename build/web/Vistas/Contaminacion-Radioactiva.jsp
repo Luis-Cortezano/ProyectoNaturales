@@ -73,7 +73,6 @@
         <h2 class="mt-4">Consecuencias de la Contaminación Radiactiva</h2>
         <p>Las consecuencias de la contaminación radiactiva son severas:</p>
         <ul>
-            <li><strong>Impacto en la Salud:</strong> Aumento del riesgo de cáncer y enfermedades genéticas.</li>
             <li><strong>Daño Ambiental:</strong> Contaminación prolongada del suelo, agua y aire, y efectos negativos en los ecosistemas.</li>
             <li><strong>Problemas Económicos:</strong> Costos asociados con la limpieza y recuperación de áreas afectadas.</li>
         </ul>

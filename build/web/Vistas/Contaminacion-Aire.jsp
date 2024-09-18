@@ -73,7 +73,6 @@
         <h2 class="mt-4">Consecuencias de la Contaminación del Aire</h2>
         <p>Las consecuencias de la contaminación del aire son severas:</p>
         <ul>
-            <li><strong>Impacto en la Salud:</strong> Aumento de enfermedades respiratorias y cardiovasculares, y reducción de la esperanza de vida.</li>
             <li><strong>Daño Ambiental:</strong> Alteración de los ecosistemas, reducción de la calidad del agua y del suelo, y contribución al cambio climático.</li>
             <li><strong>Impacto Económico:</strong> Aumento de los costos de atención médica y pérdidas económicas debido a la reducción de la productividad.</li>
         </ul>

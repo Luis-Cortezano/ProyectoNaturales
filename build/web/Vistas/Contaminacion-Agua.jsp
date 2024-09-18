@@ -74,7 +74,6 @@
         <p>Las consecuencias de la contaminación del agua son variadas y graves:</p>
         <ul>
             <li><strong>Daño a la Vida Acuática:</strong> Muerte de peces y otros organismos acuáticos, y destrucción de hábitats.</li>
-            <li><strong>Impacto en la Salud Humana:</strong> Riesgo de enfermedades transmitidas por el agua, como cólera y hepatitis.</li>
             <li><strong>Problemas Económicos:</strong> Aumento de costos para el tratamiento del agua y pérdidas en sectores económicos como la pesca y el turismo.</li>
         </ul>
 
